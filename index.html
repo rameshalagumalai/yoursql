@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourSQL</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/ed681c56b9.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light shadow">
+        <div class="container-fluid px-5">
+            <h2 class="f-700 mb-0">Your<span class="text-primary">SQL</span></h2>
+            <a class="text-secondary" href="#downloads">Download</a>
+        </div>
+    </nav>
+    <div class="d-flex flex-column align-items-center justify-content-center p-5">
+        <h1 class="f-800 display-1 text-large">Your<span class="text-primary">SQL</span></h1>
+        <p class="text-center">The one touch database browser for <a href="">MySQL</a> databases</p>
+        <p class="small text-secondary">Latest: v1.0.0</p>
+        <div class="mt-3 text-center">
+            <button class="btn btn-secondary btn-lg mx-2 shadow" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">Download <i class="fa-brands fa-linux"></i></button>
+            <button id="windows-btn" onclick="location.href='YourSQL-1.0.0 Setup.exe'" class="btn btn-primary btn-lg mx-2 shadow">Download <i class="fa-brands fa-windows"></i></button>
+            <button id="mac-os-btn" onclick="location.href='YourSQL-darwin-arm64-1.0.0.zip'" class="btn btn-dark btn-lg mx-2 shadow">Download <i class="fa-brands fa-apple"></i></button>
+        </div>
+    </div>
+    <div class="row mt-5 mx-5">
+        <div id="show-div-1" class="text-center">
+            <h4 class="f-600">Save, but not in brain</h4>
+            <p>YourSQL allows you to save queries so that you can execute or copy them to your clipboard in a single
+                click.</p>
+        </div>
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+            <img class="w-100" src="yoursql-saved-queries.png" alt="yoursql saved qureies">
+        </div>
+        <div id="show-div-2" class="col-lg-6">
+            <h4 class="f-600">Save, but not in brain</h4>
+            <p>YourSQL allows you to save queries so that you can execute or copy them to your clipboard in a single
+                click.</p>
+        </div>
+    </div>
+    <div class="row mt-5 mx-5">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+            <h4 class="f-600">Searching made easier</h4>
+            <p>Search for tables and columns quicky, and get to know the values stored in them easily.</p>
+        </div>
+        <div class="col-lg-6">
+            <img class="w-100" src="yoursql-search.png" alt="yoursql search">
+        </div>
+    </div>
+    <section id="downloads" class="mx-5 mt-5">
+        <h5 class="f-600">Downloads</h5>
+        <div class="row">
+            <div class="col-md-4 d-flex p-2 p-2">
+                <div class="rounded-4 w-100 p-3 shadow text-center">
+                    <i class="fa-brands fa-linux"></i>
+                    <h5 class="f-600">Linux</h5>
+                    <a href="yoursql_1.0.0_amd64.deb">Debian x64</a>
+                    <br>
+                    <a href="YourSQL-1.0.0-1.x86_64.rpm">RPM x64</a>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex p-2">
+                <div class="rounded-4 w-100 p-3 shadow text-center">
+                    <i class="fa-brands fa-windows"></i>
+                    <h5>Windows</h5>
+                    <a href="YourSQL-1.0.0 Setup.exe">x64 bit</a>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex p-2">
+                <div class="rounded-4 w-100 p-3 shadow text-center">
+                    <i class="fa-brands fa-apple"></i>
+                    <h5>Mac OS</h5>
+                    <a href="YourSQL-darwin-arm64-1.0.0.zip">x64 bit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="bg-dark text-white text-center p-5 mt-5">
+        Developed with <i class="fa-solid fa-heart text-danger"></i> by <a class="text-info"
+            href="https://www.rameshalagumalai.com" target="_blank" rel="noreferrer">Ramesh</a>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Choose linux distro type</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <a class="d-block" href="yoursql_1.0.0_amd64.deb">Debian x64</a>
+                    <a class="d-block mt-2" href="YourSQL-1.0.0-1.x86_64.rpm">RPM x64</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
