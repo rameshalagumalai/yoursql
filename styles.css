@@ -92,7 +92,9 @@ a {
   * {
     text-align: center;
   }
+}
 
+@media only screen and (max-width: 637px) {
   #mac-os-btn {
     margin-top: 1rem;
   }
